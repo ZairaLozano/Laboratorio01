@@ -1,0 +1,42 @@
+Videoconferencia RA-19  Parte XIII - (26-08-2020)
+Videoconferencia RA-19  Parte XIV - (28-08-2020)
+
+Hay tres formas de trabajar restricciones: Anotations, FluentValidations y Fluent API.
+
+ANOTATIONS
+Existen las anotaciones prediseñadas y personalizadas.
+ *Paqueteria que utiliza dataanotations: System.ComponentModel.DataAnnotations
+
+La clase "FriendMetadata" contiene  las anotaciones y/de las propiedades que llevan restricciones.
+Luego, en la clase friend se le dice que busque estos metadatos (Linea 10). 
+
+ *Puede haber una metadata por cada clase.
+ 
+FLUENT VALIDATIONS
+La clase FriendValidation cuenta con las validaciones de tipo Fluent validations.
+
+
+VALIDACIONES PERSONALIZADAS 
+La clase "ValidacionesNumeros", hace referencia a la clase concreta "numeros".
+En la cual se realiza una validación personalizada donde solo admita numeros par.
+La clase de las validaciones debe ser estatica con todos sus miembros estaticos.
+
+Creamos una clase concreta llamada Cpu (Esta clase debe ser partial), esta tiene un archivo de metadatos, (Clase CpuMetadata)
+( la llamamos en la linea 10 de la clase Cpu), La clase CpuMetadata tiene anotaciones y adicional a esto, tiene restricciones personalizadas
+ que se encuentran en la clase Cpuvalidations, donde valida que el tamaño minimo sea menor al maximo. 
+
+//Anotaciones prediseñadas
+La clase "Test" tiene algunos ejemplos de las validaciones que podemos tener en un formulario.
+
+Cuando usamos metadatos la regla dice que la clase concreta debe ser parcial.
+La clase de metadata puede ser comun y corriente es decir que sea instanciable.
+las validaciones personalizadas la clase debe ser estatica.
+
+
+
+
+
+Todo proyecto debe tener la clase de contexto que herede de DbContext, donde se ponen las
+ propiedades de tipo dbset y le pasamos el nombre de la entidad y el nombre de como quiero que aparezxca en la base de datos
+
+Anotacion para personalizar el nombre de una tabla en la base de datos. [Table("ClassRooms")]
